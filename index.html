@@ -3,68 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TracePoint // OSINT Breach Search</title>
+    <title>OSINT TOOLKIT // BREACH ANALYSIS</title>
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
-    <script src="https://unpkg.com/lucide@latest"></script>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="bg-glow"></div>
-    <div class="grid-overlay"></div>
-
-    <div class="disclaimer-banner">
-        <i data-lucide="alert-triangle" size="14"></i>
-        <span>AUTHORIZED SECURITY USE ONLY // ALL QUERIES LOGGED LOCALLY</span>
-    </div>
-
     <div class="container">
         <header>
-            <div class="logo">
-                <i data-lucide="shield-search" class="logo-icon"></i>
-                <span class="text-gradient">TRACEPOINT</span>
-            </div>
-            <p class="subtitle">Advanced OSINT Breach Search Engine</p>
+            <h1>OSINT TOOLKIT // DATABASE ANALYZER</h1>
         </header>
 
         <main>
-            <section class="search-container">
+            <section class="search-section">
                 <div class="tabs">
-                    <button class="tab active" data-type="phone">
-                        <i data-lucide="phone" size="18"></i>
-                        Phone Number
-                    </button>
-                    <button class="tab" data-type="discord">
-                        <i data-lucide="message-square" size="18"></i>
-                        Discord ID
-                    </button>
+                    <button class="tab active" data-type="phone">PHONE_TRACE</button>
+                    <button class="tab" data-type="discord">DISCORD_ID</button>
                 </div>
 
-                <div class="input-group">
-                    <input type="text" id="searchInput" placeholder="Enter phone number (e.g. +1234567890)..." spellcheck="false">
-                    <button class="search-btn" id="searchBtn">
-                        <span>Initiate Scan</span>
-                        <i data-lucide="zap" size="18"></i>
-                    </button>
-                </div>
-
-                <div class="status-area" id="statusArea">
-                    <!-- Status lines will appear here -->
+                <div class="input-row">
+                    <input type="text" id="searchInput" placeholder="ENTER_TARGET_DATA..." spellcheck="false">
+                    <button id="searchBtn">EXECUTE_SCAN</button>
                 </div>
             </section>
 
-            <section class="results-container" id="resultsContainer">
+            <div class="scan-log" id="scanLog">
+                <!-- Live scan feedback -->
+            </div>
+
+            <section class="results-area" id="resultsArea">
                 <div id="resultsContent">
-                    <!-- Dynamic result cards -->
+                    <!-- Tables will be injected here -->
                 </div>
             </section>
         </main>
     </div>
 
     <script src="app.js"></script>
-    <script>
-        lucide.createIcons();
-    </script>
 </body>
 </html>
